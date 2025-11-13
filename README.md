@@ -23,12 +23,14 @@ CREATE USER 'sys_temp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pas
 ### 1.3 Список пользователей
 
 Скриншот:
-screenshots/01-users.png
-Запрос:
-sql
 
-Copy
+![Users](screenshots/01-users.png)
+
+Запрос:
+
+```bash
 SELECT user, host FROM mysql.user;
+```
 
 ### 1.4 Выдача всех прав
 
@@ -41,7 +43,7 @@ FLUSH PRIVILEGES;
 
 Скриншот:
 
-screenshots/02-grants.png
+![Grants](screenshots/01-grants.png)
 
 Запрос:
 
@@ -68,12 +70,14 @@ mysql -u sys_temp -p < sakila-db/sakila-data.sql
 
 Скриншот из DBeaver:
 
-screenshots/03-er-diagram.png
+![Diagram](screenshots/01-er-diagram.png)
 
 Команда для CLI:
 
+```bash
 USE sakila;
 SHOW TABLES;
+```
 
 ## Задание 2
 
