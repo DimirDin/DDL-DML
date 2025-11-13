@@ -10,13 +10,13 @@
 - Способ: Docker-контейнер  
 - Команда запуска:
 
-```bash
+```sql
 docker run --name mysql8 -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8.0
 ```
 
 ### 1.2 Создание учётной записи sys_temp
 
-```bash
+```sql
 CREATE USER 'sys_temp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 
@@ -28,13 +28,13 @@ CREATE USER 'sys_temp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pas
 
 Запрос:
 
-```bash
+```sql
 SELECT user, host FROM mysql.user;
 ```
 
 ### 1.4 Выдача всех прав
 
-```bash
+```sql
 GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
@@ -47,7 +47,7 @@ FLUSH PRIVILEGES;
 
 Запрос:
 
-```bash
+```sql
 SHOW GRANTS FOR 'sys_temp'@'localhost';
 ```
 
@@ -74,7 +74,7 @@ mysql -u sys_temp -p < sakila-db/sakila-data.sql
 
 Команда для CLI:
 
-```bash
+```sql
 USE sakila;
 SHOW TABLES;
 ```
