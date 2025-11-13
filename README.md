@@ -43,7 +43,7 @@ FLUSH PRIVILEGES;
 
 Скриншот:
 
-![Grants](screenshots/01-grants.png)
+![Grants](screenshots/02-grants.png)
 
 Запрос:
 
@@ -70,7 +70,7 @@ mysql -u sys_temp -p < sakila-db/sakila-data.sql
 
 Скриншот из DBeaver:
 
-![Diagram](screenshots/01-er-diagram.png)
+![Diagram](screenshots/03-er-diagram.png)
 
 Команда для CLI:
 
